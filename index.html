@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+  ============================================================
+   WHO'S DOING IT LIKE THIS  /  editor's quick-edit map
+  ============================================================
+  Common things you'll want to change and what to search for:
+
+    * Hours              :  search "TODO: owner to confirm hours"
+    * Address            :  search "1048 Payne Ave"
+    * Phone (add later)  :  search "TODO: phone"
+    * Order link         :  search "cash.app/order"  (nav + mobile menu)
+    * Facebook URL       :  search "facebook.com/whosdoingitlikethis"  (social follow links only)
+    * Google Maps embed  :  search "TODO: maps embed"
+    * Logo image         :  search "logo.jpg"  (3 spots)
+    * Hero background    :  search "HERO BACKGROUND" in css/styles.css
+    * Food card images   :  search "FOOD-IMG"  (one per menu item)
+    * Copyright          :  auto-updates via JS (id="year")
+    * Open Graph image   :  search "TODO: og-image"
+    * Favicon            :  search "TODO: favicon"
+  ============================================================
+  -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Who's Doing It Like This | Soul Food in St. Paul, MN</title>
+  <meta name="description" content="Homestyle soul food made with fresh herbs and love. Oxtails, turkey chops, mac &amp; cheese and more. 1048 Payne Ave, St. Paul." />
+
+  <!-- TODO: og-image  (drop a 1200x630 jpg at images/og-image.jpg) -->
+  <meta property="og:title" content="Who's Doing It Like This | Soul Food in St. Paul" />
+  <meta property="og:description" content="Real soul food, real fresh herbs, real love. 1048 Payne Ave, St. Paul." />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:image" content="images/og-image.jpg" />
+
+  <!-- TODO: favicon  (drop a 32x32 png at images/favicon.png) -->
+  <link rel="icon" type="image/png" href="images/Whos%20doing%20it%20like%20this/logo_no_bg.png" />
+
+  <!-- Google Fonts: Playfair Display (display), Inter (body), Caveat (handwriting) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       STICKY TOP NAV
+       ============================================================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Who's Doing It Like This - home">
+        <!-- logo_no_bg.png (1 of 3) -->
+        <img src="images/Whos%20doing%20it%20like%20this/logo_no_bg.png" alt="Who's Doing It Like This logo" />
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#menu">Menu</a>
+        <a href="#story">Our Story</a>
+        <a href="about.html">About</a>
+        <a href="#visit">Visit</a>
+        <a href="https://cash.app/order/$whosdoingitlikethis" target="_blank" rel="noopener" class="btn btn-gold btn-pill nav-cta">Order</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
+          <line x1="4" y1="7"  x2="20" y2="7"  stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="4" y1="17" x2="20" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile full-screen menu overlay -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false">
+        <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <nav aria-label="Mobile">
+      <a href="#menu">Menu</a>
+      <a href="#story">Our Story</a>
+      <a href="about.html">About</a>
+      <a href="#visit">Visit</a>
+      <a href="https://cash.app/order/$whosdoingitlikethis" target="_blank" rel="noopener" class="mobile-cta">Order Online</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <!-- ============================================================
+         1. HERO
+         ============================================================ -->
+    <section id="hero" class="hero" aria-labelledby="heroTitle">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="container hero-content">
+        <!-- logo_no_bg.png (2 of 3) -->
+        <img class="hero-logo" src="images/Whos%20doing%20it%20like%20this/logo_no_bg.png" alt="Who's Doing It Like This logo" />
+
+        <h1 id="heroTitle" class="hero-title">
+          Taste so good, you'll be <span class="italic-gold">back for more!</span>
+        </h1>
+
+        <p class="hero-sub">
+          Real soul food, real fresh herbs, real love &mdash; straight out of St. Paul.
+        </p>
+
+        <div class="hero-ctas">
+          <a class="btn btn-gold" href="#menu">See the Menu</a>
+          <a class="btn btn-gold-outline" href="#visit">Find Us</a>
+        </div>
+      </div>
+
+      <a href="#story" class="hero-chevron" aria-label="Scroll to story">
+        <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
+          <polyline points="6 9 12 15 18 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- ============================================================
+         2. STORY  -- Made With Love
+         ============================================================ -->
+    <section id="story" class="story" aria-labelledby="storyTitle">
+      <div class="container story-grid">
+
+        <div class="story-text reveal">
+          <h2 id="storyTitle" class="section-title">
+            Made With Love. <br/>Seasoned With Heart.
+          </h2>
+          <p>
+            This kitchen started the way every good kitchen does &mdash; at home, in front
+            of a hot stove, cooking for the people you love. Every plate that goes out
+            of here is built the same way: slow, seasoned, and never rushed. The chef
+            keeps fresh <strong>rosemary</strong>, <strong>thyme</strong>,
+            <strong>sage</strong>, <strong>scallions</strong> and <strong>parsley</strong>
+            on the cutting board because dried-from-a-shaker just doesn't taste like
+            Sunday. Whether it's oxtails simmered until they fall apart or greens
+            cooked low all afternoon, the goal is the same one your grandma had:
+            you take a bite, you close your eyes, and for a second you're back at
+            her table. That's the standard. Nothing leaves the pan unless it
+            tastes like home.
+          </p>
+          <p class="pull-quote">"If it ain't fresh, it don't go on the plate."</p>
+        </div>
+
+        <figure class="story-figure reveal">
+          <div class="story-photo-frame">
+            <!-- We use IMG_2457 here, cropped via CSS to hide the iPhone screenshot chrome.
+                 Swap freely: drop your shot at images/story/chef.jpg and update src below. -->
+            <img
+              src="images/Whos%20doing%20it%20like%20this/IMG_2457.PNG"
+              alt="A loaded plate fresh out of the kitchen"
+              class="story-photo"
+            />
+            <span class="corner corner-tl" aria-hidden="true"></span>
+            <span class="corner corner-tr" aria-hidden="true"></span>
+            <span class="corner corner-bl" aria-hidden="true"></span>
+            <span class="corner corner-br" aria-hidden="true"></span>
+          </div>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. MENU
+         ============================================================ -->
+    <section id="menu" class="menu" aria-labelledby="menuTitle">
+      <div class="container">
+
+        <div class="divider" aria-hidden="true"></div>
+
+        <header class="section-head reveal">
+          <h2 id="menuTitle" class="section-title">The Menu</h2>
+          <p class="section-sub-hand">Homestyle plates, made with love</p>
+        </header>
+
+        <div class="menu-grid">
+
+          <!-- FOOD-IMG: Oxtails  ->  swap to images/food/oxtails.jpg when ready -->
+          <article class="menu-card reveal" style="--i: 0;">
+            <div class="menu-card-img">
+              <img src="images/Whos%20doing%20it%20like%20this/IMG_1518.PNG" alt="Plate of slow-braised oxtails in rich gravy" />
+              <span class="flame" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2s4 4 4 8a4 4 0 1 1-8 0c0-2 1-3 1-3s-3 2-3 6a6 6 0 0 0 12 0c0-6-6-11-6-11z"/></svg>
+              </span>
+            </div>
+            <div class="menu-card-body">
+              <h3>Oxtails</h3>
+              <p>Slow-braised until they fall off the bone, in a rich gravy built on fresh thyme and bay.</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" style="--i: 1;">
+            <div class="menu-card-img">
+              <img src="images/food/turkey-chops.jpg" alt="Smothered turkey chops in rich onion gravy" />
+              <span class="flame" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2s4 4 4 8a4 4 0 1 1-8 0c0-2 1-3 1-3s-3 2-3 6a6 6 0 0 0 12 0c0-6-6-11-6-11z"/></svg>
+              </span>
+            </div>
+            <div class="menu-card-body">
+              <h3>Turkey Chops</h3>
+              <p>Tender, smothered, and seasoned the way grandma would've wanted.</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" style="--i: 2;">
+            <div class="menu-card-img">
+              <img src="images/food/chicken.jpg" alt="Herbed fried chicken pieces golden and crispy" />
+              <span class="flame" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2s4 4 4 8a4 4 0 1 1-8 0c0-2 1-3 1-3s-3 2-3 6a6 6 0 0 0 12 0c0-6-6-11-6-11z"/></svg>
+              </span>
+            </div>
+            <div class="menu-card-body">
+              <h3>Chicken</h3>
+              <p>Marinated overnight, herbed and seared till the skin sings.</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" style="--i: 3;">
+            <div class="menu-card-img">
+              <img src="images/food/mac-n-cheese.jpg" alt="Baked three-cheese mac and cheese with golden crust and cheese pull" />
+              <span class="flame" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2s4 4 4 8a4 4 0 1 1-8 0c0-2 1-3 1-3s-3 2-3 6a6 6 0 0 0 12 0c0-6-6-11-6-11z"/></svg>
+              </span>
+            </div>
+            <div class="menu-card-body">
+              <h3>Mac n Cheese</h3>
+              <p>Three-cheese, baked golden, the kind that pulls a string when you lift your fork.</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" style="--i: 4;">
+            <div class="menu-card-img">
+              <img src="images/food/greens.jpg" alt="Slow-cooked Southern collard greens with smoked meat" />
+              <span class="flame" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2s4 4 4 8a4 4 0 1 1-8 0c0-2 1-3 1-3s-3 2-3 6a6 6 0 0 0 12 0c0-6-6-11-6-11z"/></svg>
+              </span>
+            </div>
+            <div class="menu-card-body">
+              <h3>Greens</h3>
+              <p>Slow-cooked collards with a little smoke, a little heat, a lot of soul.</p>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" style="--i: 5;">
+            <div class="menu-card-img">
+              <img src="images/food/rice.jpg" alt="Fluffy white rice with rich brown gravy poured over" />
+              <span class="flame" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2s4 4 4 8a4 4 0 1 1-8 0c0-2 1-3 1-3s-3 2-3 6a6 6 0 0 0 12 0c0-6-6-11-6-11z"/></svg>
+              </span>
+            </div>
+            <div class="menu-card-body">
+              <h3>Rice</h3>
+              <p>Fluffy, buttery, ready to soak up every drop of that gravy.</p>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="divider" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. HERBS BAND
+         ============================================================ -->
+    <section id="herbs" class="herbs" aria-labelledby="herbsTitle">
+      <div class="container herbs-inner reveal">
+        <h2 id="herbsTitle" class="section-title centered">Fresh Herbs. Always.</h2>
+
+        <ul class="herb-row">
+          <li class="herb-badge">
+            <svg class="sprig" viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M16 28 V6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M16 22 q-6 -2 -8 -8 q4 0 8 4" fill="currentColor"/><path d="M16 18 q6 -2 8 -8 q-4 0 -8 4" fill="currentColor"/><path d="M16 14 q-5 -2 -6 -7 q3 0 6 3" fill="currentColor"/></svg>
+            <span>Rosemary</span>
+          </li>
+          <li class="herb-badge">
+            <svg class="sprig" viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M16 28 V6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M16 22 q-6 -2 -8 -8 q4 0 8 4" fill="currentColor"/><path d="M16 18 q6 -2 8 -8 q-4 0 -8 4" fill="currentColor"/><path d="M16 14 q-5 -2 -6 -7 q3 0 6 3" fill="currentColor"/></svg>
+            <span>Thyme</span>
+          </li>
+          <li class="herb-badge">
+            <svg class="sprig" viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M16 28 V6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M16 22 q-6 -2 -8 -8 q4 0 8 4" fill="currentColor"/><path d="M16 18 q6 -2 8 -8 q-4 0 -8 4" fill="currentColor"/><path d="M16 14 q-5 -2 -6 -7 q3 0 6 3" fill="currentColor"/></svg>
+            <span>Sage</span>
+          </li>
+          <li class="herb-badge">
+            <svg class="sprig" viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M16 28 V6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M16 22 q-6 -2 -8 -8 q4 0 8 4" fill="currentColor"/><path d="M16 18 q6 -2 8 -8 q-4 0 -8 4" fill="currentColor"/><path d="M16 14 q-5 -2 -6 -7 q3 0 6 3" fill="currentColor"/></svg>
+            <span>Parsley</span>
+          </li>
+          <li class="herb-badge">
+            <svg class="sprig" viewBox="0 0 32 32" width="22" height="22" aria-hidden="true"><path d="M16 28 V6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M16 22 q-6 -2 -8 -8 q4 0 8 4" fill="currentColor"/><path d="M16 18 q6 -2 8 -8 q-4 0 -8 4" fill="currentColor"/><path d="M16 14 q-5 -2 -6 -7 q3 0 6 3" fill="currentColor"/></svg>
+            <span>Scallions</span>
+          </li>
+        </ul>
+
+        <p class="herbs-copy">
+          Fresh herbs do something dried ones never can &mdash; they wake the whole plate up.
+          That's why every pot in this kitchen starts with a handful of green, straight off the stem.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. KITCHEN GALLERY  -- real videos & extra shots
+         ============================================================ -->
+    <section id="kitchen" class="kitchen" aria-labelledby="kitchenTitle">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2 id="kitchenTitle" class="section-title centered">From the Kitchen</h2>
+          <p class="section-sub-hand">Real plates. Real kitchen. Tap to play.</p>
+        </header>
+
+        <div class="carousel reveal" id="kitchenCarousel" aria-roledescription="carousel" aria-label="From the Kitchen gallery">
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="kitchenTrack">
+
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="1 of 6">
+                <video class="kitchen-media" controls preload="metadata" playsinline poster="images/Whos%20doing%20it%20like%20this/IMG_1518.PNG">
+                  <source src="images/Whos%20doing%20it%20like%20this/v12044gd0000cn5khkfog65ruvr9pog0.mp4" type="video/mp4" />
+                  Sorry, your browser doesn't support embedded videos.
+                </video>
+              </div>
+
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 6">
+                <video class="kitchen-media" controls preload="metadata" playsinline>
+                  <source src="images/Whos%20doing%20it%20like%20this/v12044gd0000cn5ksrfog65tkddij550.mp4" type="video/mp4" />
+                  Sorry, your browser doesn't support embedded videos.
+                </video>
+              </div>
+
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 6">
+                <video class="kitchen-media" controls preload="metadata" playsinline>
+                  <source src="images/Whos%20doing%20it%20like%20this/v12044gd0000cn68t57og65gt8g8koug.mp4" type="video/mp4" />
+                  Sorry, your browser doesn't support embedded videos.
+                </video>
+              </div>
+
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="4 of 6">
+                <video class="kitchen-media" controls preload="metadata" playsinline>
+                  <source src="images/Whos%20doing%20it%20like%20this/v12044gd0000coe49vvog65h6o6lahjg.mp4" type="video/mp4" />
+                  Sorry, your browser doesn't support embedded videos.
+                </video>
+              </div>
+
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="5 of 6">
+                <video class="kitchen-media" controls preload="metadata" playsinline>
+                  <source src="images/Whos%20doing%20it%20like%20this/v12044gd0000csf7sivog65lehfbqdag.mp4" type="video/mp4" />
+                  Sorry, your browser doesn't support embedded videos.
+                </video>
+              </div>
+
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="6 of 6">
+                <img class="kitchen-media" src="images/Whos%20doing%20it%20like%20this/IMG_1518.PNG" alt="Tray of ribs glazed in BBQ and gold sauce" />
+              </div>
+
+            </div>
+          </div>
+
+          <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Previous slide" type="button">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+              <polyline points="15 6 9 12 15 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Next slide" type="button">
+            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+              <polyline points="9 6 15 12 9 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Choose slide"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         6. VISIT
+         ============================================================ -->
+    <section id="visit" class="visit" aria-labelledby="visitTitle">
+      <div class="container visit-grid">
+
+        <div class="visit-text reveal">
+          <h2 id="visitTitle" class="section-title">Come Through.</h2>
+
+          <address class="visit-address">
+            <svg class="map-pin" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+            </svg>
+            <div>
+              <strong>1048 Payne Ave, Unit B</strong><br/>
+              <em>Inside the parking lot at Eastside Pizzeria</em><br/>
+              St. Paul, MN
+            </div>
+          </address>
+
+          <a class="btn btn-gold btn-pill" href="https://www.google.com/maps/search/?api=1&query=1048+Payne+Ave+Unit+B+St+Paul+MN" target="_blank" rel="noopener">
+            Get Directions
+          </a>
+
+          <div class="hours">
+            <h3 class="hours-title">Hours</h3>
+            <dl>
+              <div class="hours-row"><dt>Monday</dt><dd>2pm &ndash; 10pm</dd></div>
+              <div class="hours-row closed"><dt>Tuesday</dt><dd>Closed</dd></div>
+              <div class="hours-row"><dt>Wednesday</dt><dd>2pm &ndash; 10pm</dd></div>
+              <div class="hours-row closed"><dt>Thursday</dt><dd>Closed</dd></div>
+              <div class="hours-row"><dt>Friday</dt><dd>2pm &ndash; 10pm</dd></div>
+              <div class="hours-row"><dt>Saturday</dt><dd>2pm &ndash; 10pm</dd></div>
+              <div class="hours-row closed"><dt>Sunday</dt><dd>Closed</dd></div>
+            </dl>
+          </div>
+
+          <a class="visit-phone" href="tel:+16123511438" aria-label="Call us at 612-351-1438">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path fill="currentColor" d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+            </svg>
+            <span>612-351-1438</span>
+          </a>
+        </div>
+
+        <div class="visit-map reveal">
+          <!-- TODO: maps embed -- if the owner gets a fresh embed code from
+               Google Maps (Share > Embed a map), replace the iframe src below. -->
+          <iframe
+            title="Map to Who's Doing It Like This, 1048 Payne Ave Unit B, St. Paul, MN"
+            src="https://www.google.com/maps?q=1048+Payne+Ave+Unit+B+St+Paul+MN&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" aria-labelledby="footerTitle">
+    <h2 id="footerTitle" class="visually-hidden">Site footer</h2>
+
+    <div class="container footer-grid">
+
+      <div class="footer-col">
+        <!-- logo_no_bg.png (3 of 3) -->
+        <img class="footer-logo" src="images/Whos%20doing%20it%20like%20this/logo_no_bg.png" alt="Who's Doing It Like This logo" />
+        <p class="footer-tag">Taste so good, you'll be back for more!</p>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Visit</h3>
+        <ul class="footer-links">
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#visit">Visit</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Follow</h3>
+        <a class="footer-social" href="https://www.facebook.com/whosdoingitlikethis" target="_blank" rel="noopener" aria-label="Follow us on Facebook">
+          <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.6 1.6-1.6h1.7V4.2c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.4V14h2.7v8h3.4z"/></svg>
+          <span>Facebook</span>
+        </a>
+        <p class="footer-note">Follow us for daily plates &amp; specials.</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2025</span> Who's Doing It Like This. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
