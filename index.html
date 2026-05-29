@@ -182,84 +182,242 @@
           <p class="section-sub-hand">Homestyle plates, made with love</p>
         </header>
 
+        <!--
+          Menu cards are intentionally photo-free. Each card uses a custom
+          hand-drawn icon, a handwritten tagline, and a row of flavor-note
+          chips so the grid still feels rich and characterful without photos.
+          When real photography is ready, swap an <img> into .menu-card-icon
+          and remove the .menu-icon SVG.
+        -->
         <div class="menu-grid">
 
-          <!-- FOOD-IMG: Oxtails  ->  swap to images/food/oxtails.jpg when ready -->
-          <article class="menu-card reveal" style="--i: 0;">
-            <div class="menu-card-img">
-              <img src="images/Whos%20doing%20it%20like%20this/IMG_1518.PNG" alt="Plate of slow-braised oxtails in rich gravy" />
-              <span class="flame" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2s4 4 4 8a4 4 0 1 1-8 0c0-2 1-3 1-3s-3 2-3 6a6 6 0 0 0 12 0c0-6-6-11-6-11z"/></svg>
-              </span>
+          <article class="menu-card menu-card--featured reveal" style="--i: 0;">
+            <span class="menu-badge menu-badge--pick" aria-label="Chef's pick">
+              <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 2l2.6 6.3 6.8.5-5.2 4.4 1.7 6.6L12 16.9l-5.9 2.9 1.7-6.6L2.6 8.8l6.8-.5L12 2z"/></svg>
+              <span>Chef's Pick</span>
+            </span>
+            <div class="menu-card-icon icon-tone-oxtail" aria-hidden="true">
+              <!-- OXTAILS: braised meat chunks on a plate, gravy pool, bone marrow centers -->
+              <svg class="menu-icon" viewBox="0 0 64 64" focusable="false">
+                <path d="M20 6c2 3 0 5 2 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.55"/>
+                <path d="M32 4c2 3 0 5 2 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.55"/>
+                <path d="M44 6c2 3 0 5 2 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.55"/>
+                <ellipse cx="32" cy="52" rx="28" ry="5" fill="currentColor" opacity="0.45"/>
+                <ellipse cx="32" cy="51" rx="26" ry="4" fill="currentColor"/>
+                <ellipse cx="32" cy="44" rx="22" ry="6" fill="currentColor" opacity="0.7"/>
+                <ellipse cx="18" cy="34" rx="9" ry="8" fill="currentColor"/>
+                <circle cx="18" cy="34" r="2.6" fill="var(--cocoa-950)" opacity="0.55"/>
+                <ellipse cx="33" cy="30" rx="11" ry="9.5" fill="currentColor"/>
+                <circle cx="33" cy="30" r="3.2" fill="var(--cocoa-950)" opacity="0.55"/>
+                <ellipse cx="48" cy="34" rx="8" ry="7" fill="currentColor"/>
+                <circle cx="48" cy="34" r="2.4" fill="var(--cocoa-950)" opacity="0.55"/>
+                <circle cx="24" cy="28" r="0.9" fill="var(--herb-400)" opacity="0.8"/>
+                <circle cx="40" cy="22" r="0.9" fill="var(--herb-400)" opacity="0.8"/>
+                <circle cx="44" cy="40" r="0.9" fill="var(--herb-400)" opacity="0.8"/>
+              </svg>
             </div>
             <div class="menu-card-body">
               <h3>Oxtails</h3>
+              <p class="menu-tagline">The Sunday sit-down</p>
+              <ul class="menu-tags" aria-label="Flavor notes">
+                <li>fall-apart</li><li>herby gravy</li><li>bone-deep</li>
+              </ul>
               <p>Slow-braised until they fall off the bone, in a rich gravy built on fresh thyme and bay.</p>
             </div>
           </article>
 
           <article class="menu-card reveal" style="--i: 1;">
-            <div class="menu-card-img">
-              <img src="images/food/turkey-chops.jpg" alt="Smothered turkey chops in rich onion gravy" />
-              <span class="flame" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2s4 4 4 8a4 4 0 1 1-8 0c0-2 1-3 1-3s-3 2-3 6a6 6 0 0 0 12 0c0-6-6-11-6-11z"/></svg>
-              </span>
+            <div class="menu-card-icon icon-tone-turkey" aria-hidden="true">
+              <!-- TURKEY CHOPS: smothered chop in gravy, with onion rings on top -->
+              <svg class="menu-icon" viewBox="0 0 64 64" focusable="false">
+                <path d="M24 6c2 3 0 5 2 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.5"/>
+                <path d="M38 4c2 3 0 5 2 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.5"/>
+                <ellipse cx="32" cy="54" rx="28" ry="4" fill="currentColor" opacity="0.4"/>
+                <ellipse cx="32" cy="48" rx="26" ry="6" fill="currentColor" opacity="0.65"/>
+                <path d="M10 32c0-9 9-18 22-18s22 9 22 18c0 9-9 16-22 16s-22-7-22-16z" fill="currentColor"/>
+                <ellipse cx="22" cy="26" rx="5" ry="2.2" fill="none" stroke="var(--cocoa-950)" stroke-width="1.3" opacity="0.55"/>
+                <ellipse cx="22" cy="26" rx="2.2" ry="1" fill="none" stroke="var(--cocoa-950)" stroke-width="1" opacity="0.45"/>
+                <ellipse cx="38" cy="32" rx="6" ry="2.6" fill="none" stroke="var(--cocoa-950)" stroke-width="1.3" opacity="0.55"/>
+                <ellipse cx="38" cy="32" rx="2.6" ry="1.1" fill="none" stroke="var(--cocoa-950)" stroke-width="1" opacity="0.45"/>
+                <ellipse cx="46" cy="24" rx="4" ry="1.8" fill="none" stroke="var(--cocoa-950)" stroke-width="1.3" opacity="0.55"/>
+                <circle cx="16" cy="36" r="1" fill="var(--herb-400)" opacity="0.85"/>
+                <circle cx="48" cy="38" r="1" fill="var(--herb-400)" opacity="0.85"/>
+                <circle cx="30" cy="42" r="1" fill="var(--herb-400)" opacity="0.85"/>
+              </svg>
             </div>
             <div class="menu-card-body">
               <h3>Turkey Chops</h3>
+              <p class="menu-tagline">Smothered & tender</p>
+              <ul class="menu-tags" aria-label="Flavor notes">
+                <li>onion gravy</li><li>seasoned deep</li><li>fork-soft</li>
+              </ul>
               <p>Tender, smothered, and seasoned the way grandma would've wanted.</p>
             </div>
           </article>
 
           <article class="menu-card reveal" style="--i: 2;">
-            <div class="menu-card-img">
-              <img src="images/food/chicken.jpg" alt="Herbed fried chicken pieces golden and crispy" />
-              <span class="flame" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2s4 4 4 8a4 4 0 1 1-8 0c0-2 1-3 1-3s-3 2-3 6a6 6 0 0 0 12 0c0-6-6-11-6-11z"/></svg>
-              </span>
+            <div class="menu-card-icon icon-tone-chicken" aria-hidden="true">
+              <!-- CHICKEN: classic drumstick silhouette - bone bottom, crispy meat ball -->
+              <svg class="menu-icon" viewBox="0 0 64 64" focusable="false">
+                <rect x="10" y="44" width="22" height="8" rx="4" fill="var(--cream-100)"/>
+                <circle cx="10" cy="44" r="4.5" fill="var(--cream-100)"/>
+                <circle cx="10" cy="52" r="4.5" fill="var(--cream-100)"/>
+                <circle cx="6"  cy="42" r="3" fill="var(--cream-100)"/>
+                <circle cx="6"  cy="54" r="3" fill="var(--cream-100)"/>
+                <path d="M28 40c0-13 9-22 20-22 9 0 14 7 14 16 0 11-9 20-20 20-8 0-14-5-14-14z" fill="currentColor"/>
+                <path d="M30 24c-2 4-2 8 0 12" stroke="var(--cocoa-950)" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.3"/>
+                <circle cx="40" cy="28" r="1.4" fill="var(--cocoa-950)" opacity="0.4"/>
+                <circle cx="48" cy="26" r="1.2" fill="var(--cocoa-950)" opacity="0.4"/>
+                <circle cx="54" cy="32" r="1.4" fill="var(--cocoa-950)" opacity="0.4"/>
+                <circle cx="44" cy="36" r="1.2" fill="var(--cocoa-950)" opacity="0.4"/>
+                <circle cx="52" cy="42" r="1.4" fill="var(--cocoa-950)" opacity="0.4"/>
+                <circle cx="38" cy="42" r="1.2" fill="var(--cocoa-950)" opacity="0.4"/>
+                <circle cx="46" cy="48" r="1" fill="var(--cocoa-950)" opacity="0.4"/>
+                <circle cx="36" cy="34" r="1" fill="var(--cocoa-950)" opacity="0.4"/>
+              </svg>
             </div>
             <div class="menu-card-body">
               <h3>Chicken</h3>
+              <p class="menu-tagline">Skin that sings</p>
+              <ul class="menu-tags" aria-label="Flavor notes">
+                <li>marinated overnight</li><li>herb-rubbed</li><li>golden crisp</li>
+              </ul>
               <p>Marinated overnight, herbed and seared till the skin sings.</p>
             </div>
           </article>
 
           <article class="menu-card reveal" style="--i: 3;">
-            <div class="menu-card-img">
-              <img src="images/food/mac-n-cheese.jpg" alt="Baked three-cheese mac and cheese with golden crust and cheese pull" />
-              <span class="flame" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2s4 4 4 8a4 4 0 1 1-8 0c0-2 1-3 1-3s-3 2-3 6a6 6 0 0 0 12 0c0-6-6-11-6-11z"/></svg>
-              </span>
+            <div class="menu-card-icon icon-tone-mac" aria-hidden="true">
+              <!-- MAC N CHEESE: bowl of elbow noodles - each noodle a thick curved tube -->
+              <svg class="menu-icon" viewBox="0 0 64 64" focusable="false">
+                <path d="M20 6c2 3 0 5 2 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.5"/>
+                <path d="M42 6c2 3 0 5 2 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.5"/>
+                <path d="M6 34h52v6c0 8-8 14-18 14H24c-10 0-18-6-18-14v-6z" fill="currentColor" opacity="0.85"/>
+                <ellipse cx="32" cy="34" rx="26" ry="4" fill="currentColor"/>
+                <path d="M10 26a7 7 0 0 1 14 0"   stroke="var(--cream-50)" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <path d="M24 22a7 7 0 0 1 14 0"   stroke="var(--gold-300)" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <path d="M38 26a7 7 0 0 1 14 0"   stroke="var(--cream-50)" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <path d="M14 32a6 6 0 0 1 12 0"   stroke="var(--gold-300)" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <path d="M26 32a6 6 0 0 1 12 0"   stroke="var(--cream-50)" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <path d="M38 32a6 6 0 0 1 12 0"   stroke="var(--gold-300)" stroke-width="5" stroke-linecap="round" fill="none"/>
+                <path d="M20 40c2-3 6-3 8 0" stroke="var(--gold-500)" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+                <path d="M34 42c2-3 6-3 8 0" stroke="var(--gold-500)" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+              </svg>
             </div>
             <div class="menu-card-body">
               <h3>Mac n Cheese</h3>
+              <p class="menu-tagline">The cheese pull</p>
+              <ul class="menu-tags" aria-label="Flavor notes">
+                <li>three-cheese</li><li>baked golden</li><li>buttery crust</li>
+              </ul>
               <p>Three-cheese, baked golden, the kind that pulls a string when you lift your fork.</p>
             </div>
           </article>
 
           <article class="menu-card reveal" style="--i: 4;">
-            <div class="menu-card-img">
-              <img src="images/food/greens.jpg" alt="Slow-cooked Southern collard greens with smoked meat" />
-              <span class="flame" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2s4 4 4 8a4 4 0 1 1-8 0c0-2 1-3 1-3s-3 2-3 6a6 6 0 0 0 12 0c0-6-6-11-6-11z"/></svg>
-              </span>
+            <div class="menu-card-icon icon-tone-greens" aria-hidden="true">
+              <!-- GREENS: bowl of layered collard leaves with vein detail -->
+              <svg class="menu-icon" viewBox="0 0 64 64" focusable="false">
+                <path d="M6 40h52v6c0 8-8 14-18 14H24c-10 0-18-6-18-14v-6z" fill="currentColor" opacity="0.55"/>
+                <ellipse cx="32" cy="40" rx="26" ry="4" fill="currentColor" opacity="0.75"/>
+                <path d="M30 40c-12-2-22-12-22-26 14 0 24 10 24 22 0 2-1 4-2 4z" fill="currentColor"/>
+                <path d="M10 16c5 6 13 14 22 22" stroke="var(--cocoa-950)" stroke-width="1" opacity="0.35" fill="none"/>
+                <path d="M34 40c12-2 22-12 22-26-14 0-24 10-24 22 0 2 1 4 2 4z" fill="currentColor" opacity="0.88"/>
+                <path d="M54 16c-5 6-13 14-22 22" stroke="var(--cocoa-950)" stroke-width="1" opacity="0.35" fill="none"/>
+                <path d="M32 40c-4-6-4-14 0-22 4 8 4 16 0 22z" fill="currentColor"/>
+                <path d="M32 20v20" stroke="var(--cocoa-950)" stroke-width="1" opacity="0.4"/>
+                <path d="M32 26c-2-1-3-3-3-5" stroke="var(--cocoa-950)" stroke-width="0.8" opacity="0.4" fill="none"/>
+                <path d="M32 30c2-1 3-3 3-5" stroke="var(--cocoa-950)" stroke-width="0.8" opacity="0.4" fill="none"/>
+                <path d="M32 34c-2-1-3-3-3-5" stroke="var(--cocoa-950)" stroke-width="0.8" opacity="0.4" fill="none"/>
+              </svg>
             </div>
             <div class="menu-card-body">
               <h3>Greens</h3>
+              <p class="menu-tagline">Slow & smoky</p>
+              <ul class="menu-tags" aria-label="Flavor notes">
+                <li>collards</li><li>a lil heat</li><li>a lotta soul</li>
+              </ul>
               <p>Slow-cooked collards with a little smoke, a little heat, a lot of soul.</p>
             </div>
           </article>
 
           <article class="menu-card reveal" style="--i: 5;">
-            <div class="menu-card-img">
-              <img src="images/food/rice.jpg" alt="Fluffy white rice with rich brown gravy poured over" />
-              <span class="flame" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2s4 4 4 8a4 4 0 1 1-8 0c0-2 1-3 1-3s-3 2-3 6a6 6 0 0 0 12 0c0-6-6-11-6-11z"/></svg>
-              </span>
+            <div class="menu-card-icon icon-tone-sweetpotato" aria-hidden="true">
+              <!-- SWEET POTATOES: candied rounds w/ orange flesh, glaze, marshmallow on top -->
+              <svg class="menu-icon" viewBox="0 0 64 64" focusable="false">
+                <ellipse cx="32" cy="54" rx="28" ry="4" fill="currentColor" opacity="0.4"/>
+                <ellipse cx="32" cy="48" rx="24" ry="5" fill="currentColor" opacity="0.6"/>
+                <g>
+                  <ellipse cx="20" cy="38" rx="12" ry="10" fill="#7a3a1a"/>
+                  <ellipse cx="20" cy="38" rx="9" ry="7.5" fill="currentColor"/>
+                  <ellipse cx="20" cy="38" rx="5" ry="4" fill="#ffb070" opacity="0.7"/>
+                </g>
+                <g>
+                  <ellipse cx="44" cy="40" rx="13" ry="11" fill="#7a3a1a"/>
+                  <ellipse cx="44" cy="40" rx="10" ry="8.5" fill="currentColor"/>
+                  <ellipse cx="44" cy="40" rx="5.5" ry="4.5" fill="#ffb070" opacity="0.7"/>
+                </g>
+                <g>
+                  <ellipse cx="32" cy="22" rx="13" ry="11" fill="#7a3a1a"/>
+                  <ellipse cx="32" cy="22" rx="10" ry="8.5" fill="currentColor"/>
+                  <ellipse cx="32" cy="22" rx="5.5" ry="4.5" fill="#ffb070" opacity="0.75"/>
+                </g>
+                <rect x="27" y="10" width="10" height="6" rx="2" fill="var(--cream-50)"/>
+                <rect x="27" y="10" width="10" height="2" rx="1" fill="var(--cream-100)"/>
+                <ellipse cx="29" cy="20" rx="2" ry="0.8" fill="var(--cream-50)" opacity="0.6"/>
+                <ellipse cx="41" cy="38" rx="2" ry="0.8" fill="var(--cream-50)" opacity="0.6"/>
+                <circle cx="14" cy="44" r="1" fill="var(--cocoa-950)" opacity="0.5"/>
+                <circle cx="36" cy="46" r="1" fill="var(--cocoa-950)" opacity="0.5"/>
+                <circle cx="52" cy="28" r="1" fill="var(--cocoa-950)" opacity="0.5"/>
+              </svg>
             </div>
             <div class="menu-card-body">
-              <h3>Rice</h3>
-              <p>Fluffy, buttery, ready to soak up every drop of that gravy.</p>
+              <h3>Sweet Potatoes</h3>
+              <p class="menu-tagline">Candied & cinnamon-kissed</p>
+              <ul class="menu-tags" aria-label="Flavor notes">
+                <li>brown sugar</li><li>brown butter</li><li>warm spice</li>
+              </ul>
+              <p>Roasted till the edges caramelize, then glazed with brown butter, brown sugar, and a whisper of cinnamon. Fork-tender, deep gold, sweet to the last bite.</p>
+            </div>
+          </article>
+
+          <article class="menu-card menu-card--new reveal" style="--i: 6;">
+            <span class="menu-badge menu-badge--new" aria-label="New menu item">
+              <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 2l2 5 5 .5-4 3.5 1.5 5L12 13l-4.5 3 1.5-5-4-3.5 5-.5L12 2z"/></svg>
+              <span>New</span>
+            </span>
+            <div class="menu-card-icon icon-tone-pudding" aria-hidden="true">
+              <!-- BANANA PUDDING: trifle cup w/ layers, whipped cream cloud, banana slice, cherry -->
+              <svg class="menu-icon" viewBox="0 0 64 64" focusable="false">
+                <path d="M12 22h40l-3 30a5 5 0 0 1-5 4.5H20a5 5 0 0 1-5-4.5L12 22z" fill="var(--cream-50)" opacity="0.18" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M14 42h36l-1.5 9.5a4 4 0 0 1-4 3.5H19.5a4 4 0 0 1-4-3.5L14 42z" fill="currentColor"/>
+                <circle cx="20" cy="48" r="3" fill="var(--gold-500)" opacity="0.85"/>
+                <circle cx="32" cy="52" r="3.2" fill="var(--gold-500)" opacity="0.85"/>
+                <circle cx="44" cy="48" r="3" fill="var(--gold-500)" opacity="0.85"/>
+                <circle cx="20" cy="48" r="1" fill="var(--cocoa-950)" opacity="0.35"/>
+                <circle cx="32" cy="52" r="1" fill="var(--cocoa-950)" opacity="0.35"/>
+                <circle cx="44" cy="48" r="1" fill="var(--cocoa-950)" opacity="0.35"/>
+                <ellipse cx="32" cy="36" rx="14" ry="3.5" fill="var(--cream-50)" stroke="var(--gold-400)" stroke-width="0.8"/>
+                <circle cx="26" cy="36" r="0.8" fill="var(--cocoa-950)" opacity="0.55"/>
+                <circle cx="32" cy="36" r="0.8" fill="var(--cocoa-950)" opacity="0.55"/>
+                <circle cx="38" cy="36" r="0.8" fill="var(--cocoa-950)" opacity="0.55"/>
+                <ellipse cx="20" cy="26" rx="6" ry="5" fill="var(--cream-50)"/>
+                <ellipse cx="32" cy="22" rx="8" ry="6.5" fill="var(--cream-50)"/>
+                <ellipse cx="44" cy="26" rx="6" ry="5" fill="var(--cream-50)"/>
+                <ellipse cx="26" cy="28" rx="6" ry="4" fill="var(--cream-50)"/>
+                <ellipse cx="38" cy="28" rx="6" ry="4" fill="var(--cream-50)"/>
+                <circle cx="32" cy="14" r="3.2" fill="var(--paprika-500)"/>
+                <circle cx="31" cy="13" r="0.9" fill="var(--cream-50)" opacity="0.7"/>
+                <path d="M32 11l1.5-4" stroke="var(--herb-500)" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="menu-card-body">
+              <h3>Banana Pudding</h3>
+              <p class="menu-tagline">Cold, creamy, gone in a minute</p>
+              <ul class="menu-tags" aria-label="Flavor notes">
+                <li>vanilla wafer</li><li>fresh banana</li><li>whipped cream</li>
+              </ul>
+              <p>Layered cold and stacked deep: silky vanilla pudding, fresh-sliced banana, and a wall of vanilla wafers softened just right. The cure for every plate before it.</p>
             </div>
           </article>
 
